@@ -1,3 +1,0 @@
-\tocdepth@munge 
-\contentsline {section}{\numberline {}Contents}{1}{}
-\tocdepth@restore 
