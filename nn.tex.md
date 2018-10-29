@@ -13,7 +13,7 @@ The goals of these notes are twofold:
 
 To the formality oriented, as myself, it is evident that forward and backward propagation are some complicated forms of function composition and chain rule application, respectively. However, these are not arbitrary instances of these mathematical rules. There is an underlying diagrammatic representation that defines the neural network and which we should take advantage of, but also that limits the class of functions expressible as the result of forward propagation. The generic architecture of a deep neural network is shown in the following figure. We count the total number of layers including the output layer but excluding the input layer. Therefore a neural network with L layers consists of one input layer, followed by L-1 hidden layers, followed by an output layer.
 
-![general nn architecture](/home/pedro/git_repositories/my_dnn/images/nn_diagram-1.png)
+![general nn architecture](images/nn_diagram-1.png)
 
 ## Forward propagation
 
@@ -29,13 +29,13 @@ $$
 $$
 
 
-![NN with a single hidden layer](/home/pedro/git_repositories/my_dnn/images/nn_diagram_2_layers-1.png)
+![NN with a single hidden layer](images/nn_diagram_2_layers-1.png)
 
 
 
 The first and only hidden layer has $n^{[1]}$ units, which are activated by a function $\chi^{[1]}$ (tanh, relu or sigmoid, for example) and the output unit is activated by a function $\chi^{[2]}$. The diagrammatic picture is the following. The circles in the input layer, also called the input units, represent each a feature $a^{[0]}_i = x_i$, so we have in total $n$ units. The following column of circles represent the units in the hidden layer.
 
-![forward propagation in a single unit](/home/pedro/git_repositories/my_dnn/images/nn_single_unit-1.png)
+![forward propagation in a single unit](images/nn_single_unit-1.png)
 
 Consider a single unit $j$ in the hidden layer. This receives as input the units from the preceding layer and outputs a real function $a^{[1]}_j$, so that
 $$
@@ -104,7 +104,7 @@ $$
 
 
 
-![backward propagation](/home/pedro/git_repositories/my_dnn/images/nn_2_layers_backprop-1.png)
+![backward propagation](images/nn_2_layers_backprop-1.png)
 
 Let us express the previous results from a diagrammatic perspective, considering the figure above. Let us sit at the output unit, where the variation in the loss due to a variation in the linear output $z^{[2]}$ is $a^{[2]} - y$. Then we append that value to that unit's output. Then, going backward, we consider the line that joins the output unit with the $k$-th unit from the hidden layer. This line contributes with the weight $W^{[2]}_k$, whose variation produces a variation in the loss. Then we only multiply the value from the left with the activation $a^{[1]}_k$, the same as for the bias unit activation (which equals one). As we go on, from the $k$-th unit in the hidden layer to the $j$-th unit in the input layer, we multiply first by $W^{[2]}_{ik} (d\chi^{[1]}(z_k)/dz)$ and second by the activation $a_{[j]}$ or by one for the bias unit.
 
@@ -175,7 +175,7 @@ $$
 ## Generalizing to arbitrary number of hidden layers
 From the preceding discussion, it is straightforward to derive a generalization to a neural network with an arbitrary number of layers. Let us consider a neural network with the following architecture:
 
-![dnn architecture](/home/pedro/git_repositories/my_dnn/images/deep_network_architecture-1.png)
+![dnn architecture](images/deep_network_architecture-1.png)
 
 ### Forward propagation
 
