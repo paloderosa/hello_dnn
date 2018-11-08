@@ -1,8 +1,3 @@
----
-header-includes:
-  - \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
----
-
 # Notes on forward and backward propagation in deep neural networks
 
 The goals of these notes are twofold:
