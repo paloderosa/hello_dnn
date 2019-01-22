@@ -94,17 +94,6 @@ From the preceding discussion, it is straightforward to derive a generalization 
 
 ![dnn architecture](images/deep_network_architecture-1.png)
 
-### Forward propagation
-
-```{r, eval = False, tidy = False}
-
-
-```
-
-
-### Backward propagation
-
-```{r, eval = False, tidy = False}
 
 
 ```
